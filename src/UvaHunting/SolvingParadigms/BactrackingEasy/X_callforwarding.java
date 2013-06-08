@@ -1,4 +1,4 @@
-package programming;
+package UvaHunting.SolvingParadigms.BactrackingEasy;
 
 import java.io.*;
 import java.util.*;

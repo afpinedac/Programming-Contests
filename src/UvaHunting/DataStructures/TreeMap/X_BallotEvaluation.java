@@ -1,4 +1,4 @@
-package programming;
+package UvaHunting.DataStructures.TreeMap;
 
 import java.io.*;
 import java.util.*;

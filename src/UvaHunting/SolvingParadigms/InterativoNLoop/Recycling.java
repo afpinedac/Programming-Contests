@@ -1,4 +1,4 @@
-package programming4;
+package UvaHunting.SolvingParadigms.InterativoNLoop;
 
 import java.io.*;
 import java.util.*;

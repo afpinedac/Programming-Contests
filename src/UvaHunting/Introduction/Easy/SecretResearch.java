@@ -1,4 +1,4 @@
-package programming;
+package UvaHunting.Introduction.Easy;
 
 import java.io.*;
 

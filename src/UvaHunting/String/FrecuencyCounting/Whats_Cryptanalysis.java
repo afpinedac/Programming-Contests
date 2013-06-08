@@ -1,4 +1,4 @@
-package programming;
+package UvaHunting.String.FrecuencyCounting;
 
 import java.util.*;
 import java.io.*;

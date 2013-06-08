@@ -1,4 +1,4 @@
-package programming;
+package UvaHunting.SolvingParadigms.Iterativo2Loop;
 
 import java.io.*;
 import java.util.*;

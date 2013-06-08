@@ -1,4 +1,4 @@
-package programming;
+package UvaHunting.Mathematics.BigInteger;
 
 import java.io.*;
 import java.math.BigInteger;

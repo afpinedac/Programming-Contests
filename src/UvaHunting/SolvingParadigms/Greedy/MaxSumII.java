@@ -1,3 +1,5 @@
+package UvaHunting.SolvingParadigms.Greedy;
+
 //package programming;
 
 import java.io.*;
