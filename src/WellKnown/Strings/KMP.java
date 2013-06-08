@@ -1,5 +1,5 @@
 
-package WellKnown;
+package WellKnown.Strings;
 
 
 public class KMP {
