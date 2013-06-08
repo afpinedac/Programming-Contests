@@ -3,7 +3,7 @@ package programming;
 import java.io.*;
 import java.util.*;
 
-public class CombinartionLock {
+public class CombinationLock {
 
     public static int getAngle(int pos) {
         return pos * 9;
@@ -32,7 +32,7 @@ public class CombinartionLock {
 
 
         //BufferedReader br = new BufferedReader(new FileReader(new File("in.txt")));
- BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         while (br.ready()) {
             String line[] = br.readLine().trim().split("[ ]+");
 
