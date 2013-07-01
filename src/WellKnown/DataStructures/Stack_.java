@@ -1,12 +1,12 @@
 package WellKnown.DataStructures;
 
-public class Stack {
+public class Stack_ {
 
     private int top;
     private int max_size;
     private int items[];
 
-    public Stack(int max_size) {
+    public Stack_(int max_size) {
         this.max_size = max_size;
         this.top = -1;
         items = new int[max_size];
@@ -33,7 +33,7 @@ public class Stack {
     }
 
     public static void main(String[] args) {
-        Stack st = new Stack(10);
+        Stack_ st = new Stack_(10);
 
         st.push(5);
         System.out.println(st.peek());

@@ -1,5 +1,6 @@
 package WellKnown.DataStructures;
 
+
 public class LinkedList {
 
     /**
@@ -31,6 +32,8 @@ public class LinkedList {
 
         public LinkList() {
             first = null;
+      
+            
         }
 
         public boolean is_empty() {
@@ -63,7 +66,7 @@ public class LinkedList {
             Link current = first;
             int i = 1;
             while (current.i_data != key) {
-                System.out.println((i++));
+               // System.out.println((i++));
                 if (current.next == null) {
                     return null;
                 } else {

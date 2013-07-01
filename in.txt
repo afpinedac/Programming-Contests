@@ -1,3 +1,22 @@
-3
-31 41 59
-1 1
+7
+Bo
+Pat
+Jean
+Kevin
+Claude
+William
+Marybeth
+6
+Jim
+Ben
+Zoe
+Joey
+Frederick
+Annabelle
+5
+John
+Bill
+Fran
+Stan
+Cece
+0
