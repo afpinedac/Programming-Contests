@@ -9,5 +9,4 @@ package WellKnown.Sorting;
  * @author AndresPineda
  */
 public class HeapSort {
-    
 }
