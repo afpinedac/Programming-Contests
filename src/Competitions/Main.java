@@ -1,51 +1,37 @@
 
 import java.io.*;
-import java.math.BigInteger;
 import java.util.*;
+import java.math.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
 
-    public static void main(String args[]) throws Exception {
-        //  BufferedReader br = new BufferedReader(new FileReader(new File("in.txt")));
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        int n = Integer.parseInt(br.readLine());
-        int a[] = new int[n];
-        String aa[] = br.readLine().split("[ ]+");
-        for (int i = 0; i < n; i++) {
-            a[i] = Integer.parseInt(aa[i]);
-        }
-
-        int m = Integer.parseInt(br.readLine());
-        int b[] = new int[m];
-        String bb[] = br.readLine().split("[ ]+");
-        for (int i = 0; i < m; i++) {
-            b[i] = Integer.parseInt(bb[i]);
-        }
+    public static void main(String[] args) throws Exception {
+        //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new FileReader(new File("in.txt")));
 
 
-        int max = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                if (b[j] % a[i] == 0) {
-                    max = Math.max(b[j] / a[i], max);
-                }
+
+        while (br.ready()) {
+            int n = Integer.parseInt(br.readLine().trim());
+            String pattern = br.readLine().trim();
+            String s = br.readLine().trim();
+            Pattern p = Pattern.compile(pattern);
+            Matcher m = p.matcher(s);
+
+            boolean found = false;
+
+            int i = 0;
+            while (m.find(i)) {
+                found = true;
+                System.out.println(m.start());
+                i = m.start() + 1;
+            }
+            if(!found){
+                System.out.println("");
             }
         }
-
-        int c = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                if (b[j] % a[i] == 0) {
-                    if (b[j] / a[i] == max) {
-                        c++;
-                    }
-                }
-            }
-        }
-        System.out.println(c);
-
-
 
     }
 }

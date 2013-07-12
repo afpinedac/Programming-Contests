@@ -9,5 +9,4 @@ package WellKnown.Matematicas;
  * @author AndresPineda
  */
 public class NewtonMethod {
-    
 }

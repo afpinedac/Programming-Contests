@@ -3,7 +3,7 @@ package UvaHunting.SolvingParadigms.ProgramacionDinamica;
 import java.io.*;
 import java.util.*;
 
-public class FlightPlanner {
+public class X_FlightPlanner {
 
     static int n;
     static String M[][];
