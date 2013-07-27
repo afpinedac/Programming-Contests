@@ -1,36 +1,38 @@
 package UvaHunting.String.FrecuencyCounting;
 
 //package programming;
-
 import java.io.*;
 import java.util.*;
 
-public class x_WordLengthAndfrecuency {
-    
-    public static void print(Object o) {
-        System.out.println(o);
-    }
-    
-    public static void main(String args[]) throws Exception {
-     //   BufferedReader br = new BufferedReader(new FileReader(new File("in.txt")));
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+public class Main {
 
-        while (br.ready()) {
+    public static void main(String args[]) throws Exception {
+        BufferedReader br = new BufferedReader(new FileReader(new File("in.txt")));
+        // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String s;
+
+        boolean first = true;
+        while ((s = br.readLine()) != null) {
+            if (s.equals("")) {
+                continue;
+            }
             StringBuilder sb = new StringBuilder();
             int f[] = new int[100];
             while (true) {
-                String l = br.readLine().trim();
-                if (l.equals("#")) {
+
+                if (s.charAt(0) == '#') {
                     break;
                 }
                 if (sb.toString().endsWith("-")) {
-                    sb.append(l);
+                    sb.append(s);
                 } else {
-                    sb.append(" ").append(l);
+                    sb.append(" ").append(s);
                 }
+                s = br.readLine();
             }
-            
+
             String res[] = sb.toString().split("[.|,|?| |!|¡]+");
+            // System.out.println(Arrays.toString(res));
             for (String x : res) {
                 x = x.trim();
                 if (x.contains("'") || x.contains("-")) {
@@ -46,18 +48,22 @@ public class x_WordLengthAndfrecuency {
                     f[x.length()]++;
                 }
             }
-            
+
+            if (!first) {
+                System.out.println("");
+            }
+
             for (int i = 1; i < 35; i++) {
                 if (f[i] > 0) {
-                    print(i + " " + f[i]);
+                    System.out.println(i + " " + f[i]);
                 }
             }
-            
-            if (br.ready()) {
-                print("");
+
+            if (first) {
+                first = false;
             }
-            
+
         }
-        
+
     }
 }

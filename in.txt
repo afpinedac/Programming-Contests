@@ -1,3 +1,27 @@
-2
-2 2 4 
-3 2 4 6
+5
+
+carthorse
+horse
+horse cart
+a do not know u
+ok a now donut
+orchestra
+Ab
+bA
+
+carthorse
+horse
+horse cart
+i do not know u
+ok i now donut
+orchestra
+
+abc
+def
+
+cba
+abc
+abc
+
+abcdef
+abcdef

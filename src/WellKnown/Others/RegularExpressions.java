@@ -2,7 +2,7 @@
  * Aqui ese muestran algunos de los conceptos y pruebas de las expresiones 
  * regulares en JAVA
  */
-package WellKnown.DataStructures;
+package WellKnown.Others;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -72,7 +72,7 @@ public class RegularExpressions {
 
 
 
-      
+
 
 
 

@@ -13,7 +13,7 @@ public class Array {
     private int nElemens;
 
     public Array(int size) {
-        a = new long[10];
+        a = new long[size];
         nElemens = 0;
     }
 

@@ -3,42 +3,48 @@ package UvaHunting.DataStructures.TreeMap;
 import java.io.*;
 import java.util.*;
 
-public class X_BallotEvaluation {
+public class BallotEvaluation {
 
-    
-    
     public static void main(String args[]) throws Exception {
         //BufferedReader br = new BufferedReader(new FileReader(new File("in.txt")));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        String line[] = br.readLine().split("[ ]+");
-        int P = Integer.parseInt(line[0]);
-        int G = Integer.parseInt(line[1]);
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int P = Integer.parseInt(st.nextToken());
+        int G = Integer.parseInt(st.nextToken());
         HashMap<String, Float> tm = new HashMap<String, Float>();
 
         for (int i = 0; i < P; i++) {
-            String xx[] = br.readLine().split("[ ]+");
-            tm.put(xx[0], Float.parseFloat(xx[1]));
+            st = new StringTokenizer(br.readLine());
+            tm.put(st.nextToken(), Float.parseFloat(st.nextToken()) * 10);
+
         }
 
         //conjeturas
-        String[] xx;
+
+
         int total;
         float suma;
         boolean valid;
-        for (int i = 0; i < G; i++) {
-            xx = br.readLine().split("[ ]+");
-            suma = 0;
-            // System.out.println(Arrays.toString(xx));
+        String op;
+        StringBuilder sb = new StringBuilder();
+        int tokens;
 
-            for (int j = 0; j < xx.length - 2; j++) {
+        for (int i = 1; i <= G; i++) {
+            sb.append("Guess #").append(i).append(" was ");
+            st = new StringTokenizer(br.readLine());
+            tokens = st.countTokens();
+            suma = 0;
+            for (int j = 0; j < tokens - 2; j++) {
                 if (j % 2 == 0) {
-                    suma += tm.get(xx[j]);
+                    suma += tm.get(st.nextToken());
+                } else {
+                    st.nextToken();
                 }
             }
 
-            String op = xx[xx.length - 2];
-            total = Integer.parseInt(xx[xx.length - 1]);
+            op = st.nextToken();
+            total = Integer.parseInt(st.nextToken()) * 10;
 
             valid = false;
             if (op.equals(">")) {
@@ -62,8 +68,16 @@ public class X_BallotEvaluation {
                     valid = true;
                 }
             }
-            System.out.println((valid) ? "Guess #" + (i + 1) + " was correct." : "Guess #" + (i + 1) + " was incorrect.");
+
+            if (valid) {
+                sb.append("correct.");
+            } else {
+                sb.append("incorrect.");
+            }
+            sb.append("\n");
+
 
         }
+        System.out.println(sb.toString().trim());
     }
 }

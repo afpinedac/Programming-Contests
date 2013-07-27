@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 import java.math.*;
 
-public class Main {
+public class P_abormal89 {
 
     static boolean is_palindrome(String s) {
         StringBuilder s1 = new StringBuilder(s);
