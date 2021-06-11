@@ -1,3 +1,7 @@
+
+/.idea
+/nbproject
+
 #################
 ## Eclipse
 #################
@@ -77,6 +81,8 @@ build/
 *.pidb
 *.log
 *.scc
+
+
 
 # Visual C++ cache files
 ipch/
